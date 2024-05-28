@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 body {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-optical-sizing: auto;
   background: #9198e5;
   font-size: 16px;
@@ -14,8 +14,13 @@ body {
   background-color: #34353a;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Oswald";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald';
 }
 
 .spacer {
@@ -25,7 +30,7 @@ h1,h2,h3,h4,h5,h6 {
 nav {
   z-index: 99 !important;
   background-color: #34353a;
-  box-shadow: 0 5px 15px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 
 .z3 {
@@ -93,7 +98,7 @@ section {
 }
 
 .title-span {
- color: #b8955a; 
+  color: #b8955a;
 }
 
 .socials-sticky {
@@ -147,7 +152,7 @@ section {
 .about-section p span {
   position: absolute;
   left: 10px;
-  top: 10px; 
+  top: 10px;
   display: block;
   width: 80px;
   background-color: #b8955a;
@@ -160,7 +165,7 @@ section {
 }
 
 .bg-shaded {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: saturate(180%) blur(10px);
   transition: all 0.3s ease-in-out;
 }
@@ -203,7 +208,7 @@ section {
   display: block;
   width: 10px;
   height: 10px;
-  background-color:#b8955a;
+  background-color: #b8955a;
   border-radius: 50%;
   text-align: center;
   flex-grow: 4;
@@ -225,7 +230,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   border-radius: 0.5rem;
   opacity: 0;
@@ -284,7 +289,7 @@ section {
   display: block;
   width: 10px;
   height: 10px;
-  background-color:#b8955a;
+  background-color: #b8955a;
   border-radius: 50%;
   text-align: center;
   flex-grow: 3;
@@ -298,7 +303,7 @@ section {
 }
 
 .testimonial-text:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 12px;
   left: 0;
@@ -317,7 +322,7 @@ section {
 }
 
 .line-left:after {
-  content: "";
+  content: '';
   height: 5px;
   width: 40px;
   background-color: #b8955a;
@@ -331,7 +336,7 @@ section {
 }
 
 .testimonials-picture:after {
-  content: "";
+  content: '';
   position: absolute;
   right: 50px;
   bottom: 0;
@@ -348,4 +353,56 @@ section {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.contact {
+  background-color: #3d3e42;
+  position: relative;
+  min-height: 500px;
+  border-top: 5px solid #b8955a;
+  border-bottom: 5px solid #b8955a;
+  z-index: 1;
+  padding: 50px 0 0px 0;
+}
+
+.contact-items a {
+  background-color: #31333b;
+  padding: 5px 15px;
+  color: #b8955a;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-items a > * {
+  display: inline;
+}
+
+.contact-items a svg {
+  color: #fff;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.text-gold {
+  color: #b8955a;
+}
+
+@media screen and (max-width: 569px) {
+  .testimonial-text {
+    padding-right: 25px;
+  }
+
+  .testimonials-picture img {
+    position: relative;
+  }
+
+  .hero {
+    overflow: hidden;
+  }
+
+  .home-img {
+    right: -25%;
+  }
 }
