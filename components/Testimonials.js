@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Testimonials() {
   return (
-    <section className="testimonials container mx-auto text-white pb-20">
+    <section className="testimonials container mx-auto text-white pb-20 p-5">
       <div className="decorative-spans">
         <span></span>
         <span></span>

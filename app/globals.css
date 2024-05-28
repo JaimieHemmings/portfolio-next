@@ -23,6 +23,14 @@ h6 {
   font-family: 'Oswald';
 }
 
+.hero {
+  border-bottom: 5px solid #b8955a;
+}
+
+.hero .container {
+  position: relative;
+}
+
 .spacer {
   padding-top: 76px;
 }
@@ -405,4 +413,28 @@ section {
   .home-img {
     right: -25%;
   }
+}
+
+.bg-white-transparent {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.portfolio-list-item:hover .btn-main {
+  background: #31333b;
+  color: #fff;
+}
+
+.menu-item {
+  color: #fff;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.menu-item.active {
+  color: #b8955a;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #31333b;
 }
