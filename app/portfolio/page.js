@@ -2,8 +2,13 @@ import Hero from '@/components/Hero';
 import img1 from '@/assets/images/nova-landing.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import connectDB from '@/config/database';
+import portfolioposts from '@/models/PortfolioItem';
+import PortfolioPosts from '@/components/PortfolioPosts';
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  await connectDB();
+  const portfoliopostsdata = await portfolioposts.find({}).limit(6);
   return (
     <>
       <Hero
@@ -15,45 +20,7 @@ export default function PortfolioPage() {
       <section className="portfolio container mx-auto pt-20">
         <h2 className="text-4xl text-white text-center pb-20">Portfolio</h2>
 
-        <div className="hero-content grid grid-cols-1 sm:grid-cols-2 w-full bg-shaded p-5 rounded mb-10 portfolio-list-item">
-          <div className="p-5">
-            <h1 className="text-4xl text-white font-bold">Box Office News!</h1>
-            <p className="py-6 text-white">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <Link href="/portfolio/test" className="btn btn-main">
-              View Project
-            </Link>
-          </div>
-          <Image
-            className="max-w-sm rounded shadow-2xl w-full mx-auto"
-            src={img1}
-            width={0}
-            height={0}
-          />
-        </div>
-
-        <div className="hero-content grid grid-cols-1 sm:grid-cols-2 w-full bg-shaded p-5 rounded mb-10 portfolio-list-item">
-          <div className="p-5">
-            <h1 className="text-4xl text-white font-bold">Box Office News!</h1>
-            <p className="py-6 text-white">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <Link href="/portfolio/test" className="btn btn-main">
-              View Project
-            </Link>
-          </div>
-          <Image
-            className="max-w-sm rounded shadow-2xl w-full mx-auto"
-            src={img1}
-            width={0}
-            height={0}
-          />
-        </div>
+        <PortfolioPosts data={portfoliopostsdata} />
       </section>
       <section className="antialiased">
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
