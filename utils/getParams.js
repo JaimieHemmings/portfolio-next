@@ -1,9 +1,7 @@
 'use client';
 import { useParams } from 'next/navigation';
 
-const GetParams = () => {
+export default function urlParams() {
   const params = useParams();
-  console.log(params);
-};
-
-export default GetParams;
+  return params;
+}
