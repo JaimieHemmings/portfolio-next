@@ -1,7 +1,4 @@
 import Hero from '@/components/Hero';
-import img1 from '@/assets/images/nova-landing.png';
-import Image from 'next/image';
-import Link from 'next/link';
 import connectDB from '@/config/database';
 import portfolioposts from '@/models/PortfolioItem';
 import PortfolioPosts from '@/components/PortfolioPosts';

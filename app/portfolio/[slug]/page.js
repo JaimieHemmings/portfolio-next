@@ -2,13 +2,13 @@ import connectDB from '@/config/database';
 import portfolioposts from '@/models/PortfolioItem';
 import convertToSerializeableObject from '@/utils/ConvertToObject';
 import Image from 'next/image';
-import Link from 'next/link';
+
+export const dynamic = 'force-dynamic';
 
 const PortfolioPost = async ({ params }) => {
   await connectDB();
   const postData = await portfolioposts.find(params).lean();
   const data = convertToSerializeableObject(postData);
-  console.log(data[0]);
   return (
     <section className="container mx-auto p-5 pt-20">
       <Image
@@ -35,18 +35,19 @@ const PortfolioPost = async ({ params }) => {
           />
         </div>
         <div className="p-5">
-          <p className="text-white">{data[0].paragraph3}</p>
+          <p className="text-white pb-5">{data[0].paragraph3}</p>
           <p className="text-white">{data[0].paragraph4}</p>
         </div>
       </div>
       <div className="w-full pb-10">
         {data[0].link && (
-          <Link
+          <a
             href={data[0].link}
+            rel="noopener noreferrer"
             className="text-center btn-main link-full-w"
           >
             View Project
-          </Link>
+          </a>
         )}
       </div>
     </section>

@@ -31,7 +31,6 @@ const ItemPostSchema = new Schema({
   },
   link: {
     type: String,
-    required: true,
   },
   images: [
     {
