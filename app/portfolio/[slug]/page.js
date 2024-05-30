@@ -42,6 +42,7 @@ const PortfolioPost = async ({ params }) => {
       <div className="w-full pb-10">
         {data[0].link && (
           <a
+            target="_blank"
             href={data[0].link}
             rel="noopener noreferrer"
             className="text-center btn-main link-full-w"

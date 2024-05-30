@@ -3,6 +3,12 @@ import connectDB from '@/config/database';
 import portfolioposts from '@/models/PortfolioItem';
 import PortfolioPosts from '@/components/PortfolioPosts';
 
+export const metadata = {
+  title: 'Jaimie Hemmings | Portfolio',
+  description: 'View my most recent projects',
+  keywords: 'Jaimie Hemmings, developer, react, next.js, full-stack, portfolio',
+};
+
 export default async function PortfolioPage() {
   await connectDB();
   const portfoliopostsdata = await portfolioposts.find({}).limit(6);
@@ -14,12 +20,13 @@ export default async function PortfolioPage() {
         text="Welcome to my web development portfolio! I pride myself on my passion and skills in creating dynamic and responsive websites. With a keen eye for detail and a commitment to delivering exceptional user experiences."
         button="Contact Me"
       />
-      <section className="portfolio container mx-auto pt-20">
+      <section className="portfolio container mx-auto p-5 pt-20">
         <h2 className="text-4xl text-white text-center pb-20">Portfolio</h2>
-
-        <PortfolioPosts data={portfoliopostsdata} />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <PortfolioPosts data={portfoliopostsdata} />
+        </div>
       </section>
-      <section className="antialiased">
+      <section className="antialiased p-5">
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-4xl text-white text-center">Other Skills</h2>

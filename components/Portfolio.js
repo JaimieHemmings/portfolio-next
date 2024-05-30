@@ -8,13 +8,13 @@ export default async function Portfolio() {
   const recentposts = await portfolioposts
     .find({})
     .sort({ createdAt: -1 })
-    .limit(6)
+    .limit(3)
     .lean();
 
   return (
     <section className="portfolio container mx-auto pt-10 pb-10 p-5">
       <h2 className="text-center text-white text-4xl pb-10">Portfolio</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pb-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-10">
         {recentposts.length === 0 ? (
           <p>No Properties Found</p>
         ) : (
