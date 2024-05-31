@@ -17,7 +17,7 @@ export default function Socials() {
           </Link>
         </li>
         <li className="pb-5">
-          <Link href="/contact">
+          <Link href="/#contact">
             <FaEnvelope />
           </Link>
         </li>

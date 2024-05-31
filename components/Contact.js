@@ -2,7 +2,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 
 export default function Contact() {
   return (
-    <section className="contact p-5">
+    <section className="contact p-5" id="contact">
       <h2 className="text-4xl text-white text-center stroke-behind">
         Contact Me
       </h2>
