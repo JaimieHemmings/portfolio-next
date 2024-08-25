@@ -19,7 +19,7 @@ export default function Hero({ title, titlesubtext, text, button }) {
               <span className="title-span text-7xl">{titlesubtext}</span>
             </h1>
             <p className="text-lg text-white pb-10">{text}</p>
-            <a className="btn-main" href="/contact">
+            <a className="btn-main" href="#contact">
               {button}
             </a>
           </div>
