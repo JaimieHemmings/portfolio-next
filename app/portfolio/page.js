@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import connectDB from '@/config/database';
 import portfolioposts from '@/models/PortfolioItem';
 import PortfolioPosts from '@/components/PortfolioPosts';
+import Contact from '@/components/Contact';
 
 export const metadata = {
   title: 'Jaimie Hemmings | Portfolio',
@@ -69,6 +70,7 @@ export default async function PortfolioPage() {
           </div>
         </div>
       </section>
+      <Contact />
     </>
   );
 }
